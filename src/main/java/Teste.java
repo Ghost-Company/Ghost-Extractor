@@ -25,13 +25,14 @@ public class Teste {
 	        System.out.println(wp.getAbertura());
 	        System.out.println(wp.getStatus());
 	        String arg = "address="+wp.getBairro()+wp.getLogradouro();
-	        JSONObject jo = getGeo(arg);
+	        System.out.println(arg);
+	        //JSONObject jo = getGeo(arg);
 	     
 	        
 	        
-	        AtividadeWrapper aw = wp.getAtividade_principal().iterator().next();
+	        /*AtividadeWrapper aw = wp.getAtividade_principal().iterator().next();
 	        System.out.println(aw.getCode());
-	        System.out.println(aw.getText());
+	        System.out.println(aw.getText());*/
 	    }
 	    
 	    
@@ -63,5 +64,5 @@ public class Teste {
 					 JSONObject jsonObject = new JSONObject(responseStrBuilder.toString());
 					 
 					return jsonObject;
-}
+	    }
 }

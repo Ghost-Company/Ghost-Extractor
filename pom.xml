@@ -4,6 +4,14 @@
   <artifactId>ProjCNPJ</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   
+  <repositories>
+        <repository>
+            <id>maven-restlet</id>
+            <name>Restlet repository</name>
+            <url>https://maven.restlet.com</url>
+        </repository>
+	</repositories>
+  
   <dependencies>
   
 		  <dependency>
@@ -38,7 +46,8 @@
 	 	<artifactId>org.restlet</artifactId>
 	 	<version>2.1.4</version>
 	 </dependency>
-	 <dependency>
+
+  	 <dependency>
 	 	<groupId>org.restlet.jee</groupId>
 	 	<artifactId>org.restlet.ext.json</artifactId>
 	 	<version>2.1.4</version>
