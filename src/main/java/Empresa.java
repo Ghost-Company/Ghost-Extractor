@@ -22,6 +22,9 @@ public class Empresa {
 		//this.latitude = latitude;
 	}
 	
+	public Empresa(){}
+	
+	
 	public String getNome() {
 		return nome;
 	}
