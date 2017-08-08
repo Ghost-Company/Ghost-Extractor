@@ -13,13 +13,21 @@ import com.github.alexsandrospecht.wrapper.AtividadeWrapper;
 import com.github.alexsandrospecht.wrapper.RetornoWrapper;
 import com.google.gson.Gson;
 
+import feign.FeignException;
+
 public class Teste {
-	   private static final String GOOGLE_CNPJ = "06990590000204";
+	   private static final String GOOGLE_CNPJ = "00000003327477";
 
 	    public static void main(String[] args) throws JsonProcessingException, IOException, JSONException {
 	        System.out.println(ConsultaCnpj.consultaData(GOOGLE_CNPJ));
-
-	        RetornoWrapper wp = ConsultaCnpj.consultaCnpj(GOOGLE_CNPJ);
+	        RetornoWrapper wp = null;
+            try {
+            	 wp = ConsultaCnpj.consultaCnpj(GOOGLE_CNPJ);
+			} catch (Exception e) {
+				// TODO: handle exception
+				return;
+			}
+	       
 	        System.out.println(wp.getCnpj());
 	        System.out.println(wp.getNome());
 	        System.out.println(wp.getAbertura());
